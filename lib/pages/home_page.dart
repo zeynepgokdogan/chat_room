@@ -1,3 +1,4 @@
+import 'package:chat_room/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_room/util/departments.dart';
 
@@ -14,18 +15,21 @@ class _HomePageState extends State<HomePage> {
     return Container(
       height: double.infinity,
       width: double.infinity,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/background.jpg"),
-          fit: BoxFit.cover,
-        ),
-      ),
+      decoration: backGroundImage,
       child: const Center(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Departments(typeofDep: 'Web development', infofDep: 'infofDep'),
-              Departments(typeofDep: 'csdf', infofDep: 'infofDep'),
+              SizedBox(
+                height: 180,
+              ),
+              Departments(typeofDep: 'WEB DEVELOPMENT', infofDep: 'infofDep'),
+              Departments(typeofDep: 'DESIGN', infofDep: ''),
+              Departments(typeofDep: 'PHOTOGRAPHY', infofDep: ''),
+              Departments(typeofDep: '', infofDep: ''),
+              Departments(typeofDep: '', infofDep: ''),
+              Departments(typeofDep: '', infofDep: ''),
+              Departments(typeofDep: '', infofDep: ''),
             ],
           ),
         ),

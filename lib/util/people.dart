@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:chat_room/constants.dart';
+import 'package:flutter/material.dart';
 
-class Departments extends StatefulWidget {
-  const Departments({
+class People extends StatefulWidget {
+  const People({
     super.key,
     required this.typeofDep,
     required this.infofDep,
@@ -11,13 +11,14 @@ class Departments extends StatefulWidget {
   final String typeofDep;
   final String infofDep;
 
+
   @override
-  State<Departments> createState() => _DepartmentsState();
+  State<People> createState() => _PeopleState();
 }
 
-class _DepartmentsState extends State<Departments> {
+class _PeopleState extends State<People> {
   @override
-  Widget build(Object context) {
+  Widget build(BuildContext context) {
     return SizedBox(
       height: 180,
       child: 
@@ -27,12 +28,10 @@ class _DepartmentsState extends State<Departments> {
             shadowColor: shadowColor,
             child: InkWell(
               child: ListTile(
-                onTap: () {
-
-                },
+                onTap: () {},
                 leading: const CircleAvatar(
                   radius: 25 ,
-                  backgroundImage: AssetImage("assets/department_1.jpeg") ,
+                  backgroundImage: AssetImage("assets/background.jpg") ,
                 ),
                 title: Text(widget.typeofDep,style: listtileTitle,),
                 subtitle: Text(widget.infofDep, style: listtileSubtitle,),    
