@@ -33,10 +33,9 @@ class DepartmentsPage extends StatelessWidget {
 
     for (int i = 0; i < 7; i++) {
       var departmentName = Strings.DEPARTMENT_NAMES[i];
-      var departmentDetail= Strings.DEPARTMENT_DETAILS[i];
-      
-      Departments addDepartment =
-          Departments(departmentName, departmentDetail);
+      var departmentDetail = Strings.DEPARTMENT_DETAILS[i];
+      var departmentImage = 'department_' + '${i+1}.jpeg';
+      Departments addDepartment = Departments(departmentName, departmentDetail,departmentImage);
       temp.add(addDepartment);
     }
     return temp;

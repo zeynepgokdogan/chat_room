@@ -18,6 +18,10 @@ class CardDecoration extends StatelessWidget {
         child: InkWell(
           child: ListTile(
             onTap: () {},
+            leading: Image.asset(
+              // ignore: prefer_interpolation_to_compose_strings
+              "assets/" + viewDepartments.DepartmentImage,            
+            ),
             title: Text(
               viewDepartments.DepartmentName,
               style: listtileTitle,
