@@ -1,5 +1,5 @@
 import 'package:chat_room/data/constants.dart';
-import 'package:chat_room/util/card_decoration.dart';
+import 'package:chat_room/util/department_card.dart';
 import 'package:chat_room/util/deparments.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_room/data/strings.dart';
@@ -7,8 +7,8 @@ import 'package:chat_room/data/strings.dart';
 class DepartmentsPage extends StatelessWidget {
   late final List<Departments> allDepartments;
 
-  DepartmentsPage() {
-    allDepartments = dataSource();
+  DepartmentsPage({super.key}) {
+    allDepartments = dataSourceD();
   }
 
   @override
@@ -17,10 +17,10 @@ class DepartmentsPage extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       decoration: backGroundImage,
-      child: Center(
+      child: Center(     
         child: ListView.builder(
           itemBuilder: (context, index) {
-            return CardDecoration(viewDepartments: allDepartments[index]);
+            return DepartmentCard(viewDepartments: allDepartments[index]);
           },
           itemCount: allDepartments.length,
         ),
@@ -28,13 +28,13 @@ class DepartmentsPage extends StatelessWidget {
     );
   }
 
-  List<Departments> dataSource() {
+  List<Departments> dataSourceD() {
     List<Departments> temp = [];
 
     for (int i = 0; i < 7; i++) {
       var departmentName = Strings.DEPARTMENT_NAMES[i];
       var departmentDetail = Strings.DEPARTMENT_DETAILS[i];
-      var departmentImage = 'department_' + '${i+1}.jpeg';
+      var departmentImage = 'department_' '${i+1}.jpeg';
       Departments addDepartment = Departments(departmentName, departmentDetail,departmentImage);
       temp.add(addDepartment);
     }

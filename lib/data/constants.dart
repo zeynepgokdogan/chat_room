@@ -7,11 +7,11 @@ const listtileTitle = TextStyle(
 );
 
 const listtileSubtitle = TextStyle(
-  fontSize: 20.0,
+  fontSize: 15.0,
   color: Colors.black,
 );
 
-const Color cardColor = Color.fromARGB(255, 227, 245, 247);
+const Color cardColor = Colors.white70;
 const Color shadowColor = Colors.black;
 
 const BoxDecoration backGroundImage = BoxDecoration(

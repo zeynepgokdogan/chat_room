@@ -3,9 +3,9 @@ class Departments {
   final String _departmentDetail;
   final String _departmentImage;
 
-  get DepartmentName => this._departmentName;
-  get DepartmentDetail => this._departmentDetail;
-  get DepartmentImage => this._departmentImage;
+  get departmentName => _departmentName;
+  get departmentDetail => _departmentDetail;
+  get departmentImage => _departmentImage;
 
   Departments(
       this._departmentName, this._departmentDetail, this._departmentImage);
