@@ -1,3 +1,4 @@
+import 'package:chat_room/pages/person_page.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_room/data/constants.dart';
 import 'package:chat_room/util/people.dart';
@@ -8,8 +9,8 @@ class PeopleCard extends StatelessWidget {
   const PeopleCard({required this.viewPeople, Key? key}) : super(key: key);
 
   @override
-  Widget build(Object context) {
-    return Container(   
+  Widget build(BuildContext context) {
+    return Container(
       padding: const EdgeInsets.all(5),
       child: SizedBox(
         height: 180,
@@ -19,11 +20,15 @@ class PeopleCard extends StatelessWidget {
           shadowColor: shadowColor,
           child: InkWell(
             child: ListTile(
-              onTap: () {            
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PersonPage()));
               },
               leading: Image.asset(
                 // ignore: prefer_interpolation_to_compose_strings
-                "assets/" + viewPeople.peopleImage,            
+                "assets/" + viewPeople.peopleImage,
               ),
               title: Text(
                 viewPeople.peopleName,

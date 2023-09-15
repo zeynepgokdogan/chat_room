@@ -3,10 +3,10 @@ import 'package:chat_room/util/deparments.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_room/data/constants.dart';
 
-class DepartmentCard extends StatelessWidget {
+class DepartmentsCard extends StatelessWidget {
   final Departments viewDepartments;
 
-  const DepartmentCard({required this.viewDepartments, Key? key})
+  const DepartmentsCard({required this.viewDepartments, Key? key})
       : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class DepartmentCard extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const PeoplePage(allPeople: [],)));
+                  MaterialPageRoute(builder: (context) => const PeoplePage()));
               },
               leading: Image.asset(  
                 // ignore: prefer_interpolation_to_compose_strings

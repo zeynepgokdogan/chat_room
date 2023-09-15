@@ -1,4 +1,5 @@
-import 'package:flutter/widgets.dart';
+import 'package:chat_room/data/constants.dart';
+import 'package:flutter/material.dart';
 
 class PersonPage extends StatefulWidget {
   const PersonPage({super.key});
@@ -10,6 +11,20 @@ class PersonPage extends StatefulWidget {
 class _PersonPageState extends State<PersonPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar:AppBar(
+        leading: IconButton(
+          icon: appbarBackIcon,
+          color: appbarIcon,
+          onPressed: () => Navigator.of(context).pop(),
+          ),
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: backGroundImage,
+      ),
+      bottomNavigationBar: bottomNavigationBar,
+    );
   }
 }

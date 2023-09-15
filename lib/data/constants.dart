@@ -13,9 +13,40 @@ const listtileSubtitle = TextStyle(
 
 const Color cardColor = Colors.white70;
 const Color shadowColor = Colors.black;
+const Color appbarIcon = Color.fromARGB(255, 126, 55, 226);
+const Color navigationBarColor = Color.fromARGB(255, 126, 55, 226);
 
 const BoxDecoration backGroundImage = BoxDecoration(
   image: DecorationImage(
     image: AssetImage("assets/background.jpg"),
-    fit: BoxFit.cover,),
+    fit: BoxFit.cover,
+  ),
+);
+
+const Icon appbarBackIcon = Icon(Icons.arrow_back_ios);
+
+BottomNavigationBar bottomNavigationBar = BottomNavigationBar(
+  currentIndex: 1,
+  items: const [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: '',
+      backgroundColor: navigationBarColor,
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.person), 
+      label: '', 
+      backgroundColor: navigationBarColor,
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.message), 
+      label: '', 
+      backgroundColor: navigationBarColor,
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.people), 
+      label: '', 
+      backgroundColor: navigationBarColor,
+   ),
+  ],
 );

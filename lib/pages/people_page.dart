@@ -4,37 +4,57 @@ import 'package:flutter/material.dart';
 import 'package:chat_room/data/strings.dart';
 import 'package:chat_room/data/constants.dart';
 
-class PeoplePage extends StatelessWidget {
-  final List<People> allPeople;
-  const PeoplePage({required this.allPeople, Key? key}) : super(key: key);
+class PeoplePage extends StatefulWidget {
+ 
+ const PeoplePage({Key? key}) : super(key: key);
+
+  @override
+  State<PeoplePage>  createState() => _PeoplePage();
+
+}
+
+class _PeoplePage extends State<PeoplePage> {
+  List<People> allDepartments = dataSourceP();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      decoration: backGroundImage,
-      child: Center(
-        child: ListView.builder(
-          itemBuilder: (context, index) {
-            return PeopleCard(viewPeople: allPeople[index]);
-          },
-          itemCount: allPeople.length,
+    return Scaffold(
+      appBar:AppBar(
+        leading: IconButton(
+          icon: appbarBackIcon,
+          color: appbarIcon,
+          onPressed: () => Navigator.of(context).pop(),
+          ),
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: backGroundImage,
+        child: Center(
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return PeopleCard(viewPeople: allDepartments[index]);
+            },
+            itemCount: allDepartments.length,
+          ),
         ),
       ),
+      bottomNavigationBar: bottomNavigationBar,
     );
   }
 
-  List<People> dataSourceP() {
+}
+
+List<People> dataSourceP() {
     List<People> temp = [];
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 6; i++) {
       var peopleName = Strings.PEOPLE_NAMES[i];
       var peopleDetail = Strings.PEOPLE_DETAILS[i];
-      var peopleImage = 'department_' '${i + 1}.jpeg';
+      var peopleImage = 'people_' '${i + 1}.jpeg';
       People addPeople = People(peopleName, peopleDetail, peopleImage);
       temp.add(addPeople);
     }
     return temp;
   }
-}
+
