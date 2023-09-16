@@ -12,13 +12,13 @@ class Strings {
 
   // ignore: constant_identifier_names
   static const List<String> DEPARTMENT_DETAILS = [
-    "CINEMA IS BLA BLA",
-    "DESIGN IS BLA BLA",
-    "PHOTOGRAPHY IS BLA BLA",
-    "WEB DEVELOPMENT IS BLA BLA BLA",
-    "FASHIONIS BLA BLA",
-    "BUSINESS IS BLA BLA",
-    "ARCHITECTURE IS BLA BLA"
+    "Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet ",
+    "A design is a concept of either an object, a process, or a system that is specific and, in most cases, detailed. ",
+    "Photography is the art, application, and practice of creating images by recording light, either electronically by means of an image sensor,",
+    "Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network).",
+    "Fashion is a term used interchangeably to describe the creation of clothing, footwear, accessories, cosmetics, ",
+    "Having a business name does not separate the business entity from the owner, which means that the owner of the business is responsible and liable for debts incurred by the business. ",
+    "Architecture is the art and technique of designing and building, as distinguished from the skills associated with construction.[3] It is both the process and the product of sketching, "
   ];
 
   // ignore: constant_identifier_names
