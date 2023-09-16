@@ -32,7 +32,7 @@ class _PersonPageState extends State<PersonPage> {
           children: [
             Container(
               height: 400,
-              color: Colors.white70,
+             
               padding: const EdgeInsets.symmetric(vertical:10.0,horizontal: 20.0 ),
               child: Row(
                 children: [
@@ -48,11 +48,13 @@ class _PersonPageState extends State<PersonPage> {
                       Icon(Icons.push_pin_outlined, size: 30,),
                     ],
                   ),
-                  SizedBox(width: 10,),
+                  SizedBox(width: 20,),
                   Container(
+                    color: Colors.white70,
+                    width: 230,
                     child: Column(
                       children: <Widget> [
-                        Text(personName),
+                        Text(personName,style: listtileTitle,),
                         Expanded(
                           flex:1,
                           child: SingleChildScrollView(
