@@ -1,10 +1,9 @@
 class Strings {
-
   // ignore: constant_identifier_names
   static const List<String> DEPARTMENT_NAMES = [
     "CINEMA",
     "DESIGN",
-    "PHOTOGRAPHY", 
+    "PHOTOGRAPHY",
     "WEB DEVELOPMENT",
     "FASHION",
     "BUSINESS",
@@ -22,8 +21,8 @@ class Strings {
     "ARCHITECTURE IS BLA BLA"
   ];
 
-    // ignore: constant_identifier_names
-    static const List<String> PEOPLE_NAMES = [
+  // ignore: constant_identifier_names
+  static const List<String> PEOPLE_NAMES = [
     "CHANDLER BING",
     "jOEY TRIBBIANI",
     "MONICA GELLER",
@@ -32,8 +31,8 @@ class Strings {
     "PHOEBE BUFFAY"
   ];
 
-   // ignore: constant_identifier_names
-   static const List<String> PEOPLE_DETAILS = [
+  // ignore: constant_identifier_names
+  static const List<String> PEOPLE_DETAILS = [
     "CHANDLER BING",
     "jOEY TRIBBIANI",
     "MONICA GELLER",
@@ -42,4 +41,7 @@ class Strings {
     "PHOEBE BUFFAY"
   ];
 
+  static const List<String> PERSON_DETAILS = [
+    "Chandler Muriel Bing (born 1967/1968)[2] is a fictional character from the NBC sitcom Friends, portrayed by actor Matthew Perry.[3] Chandler was born to Nora Tyler Bing, an erotic romance novelist, and Charles Bing, a gay female impersonator and star of a Las Vegas drag show called  as Helena Handbasket. Chandler is of Scottish and Swedish descent.[citation needed] He is an only child and is apparently from an affluent family.[citation needed] His parents announced their divorce to him over Thanksgiving dinner when Chandler was nine years old."
+  ];
 }
