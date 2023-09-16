@@ -31,14 +31,15 @@ class Strings {
     "PHOEBE BUFFAY"
   ];
 
+
   // ignore: constant_identifier_names
   static const List<String> PEOPLE_DETAILS = [
-    "CHANDLER BING",
-    "jOEY TRIBBIANI",
-    "MONICA GELLER",
-    "RACHEL GREEN",
-    "ROSS GELLER",
-    "PHOEBE BUFFAY"
+    "Brash, zany, and estranged from both of his parents.",
+    "Promiscuous and dim-witted but good-natured, as well as very loyal, caring, and protective of his friends",
+    "Very energetic, compulsive and strictly organized neat freak who loves to clean and play everything by the rules.",
+    "spoiled yet courageous young woman who has worked for none of what she has, unlike best friend Monica, and is initially equipped to do nothing",
+    "clumsy, oversensitive and socially awkward - taking the characteristics of the stereotypical loser nerd. He also has a dry, sarcastic and witty sense of humor that is second only to Chandler's.",
+    "Cheerful, generous, and free-spirited."
   ];
 
   // ignore: constant_identifier_names
