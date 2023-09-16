@@ -1,16 +1,15 @@
+import 'package:chat_room/data/constants.dart';
+import 'package:chat_room/data/strings.dart';
+import 'package:chat_room/pages/departments_page.dart';
 import 'package:chat_room/util/people.dart';
 import 'package:chat_room/util/people_card.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_room/data/strings.dart';
-import 'package:chat_room/data/constants.dart';
 
 class PeoplePage extends StatefulWidget {
- 
- const PeoplePage({Key? key}) : super(key: key);
+  const PeoplePage({Key? key}) : super(key: key);
 
   @override
-  State<PeoplePage>  createState() => _PeoplePage();
-
+  State<PeoplePage> createState() => _PeoplePage();
 }
 
 class _PeoplePage extends State<PeoplePage> {
@@ -19,13 +18,7 @@ class _PeoplePage extends State<PeoplePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
-        leading: IconButton(
-          icon: appbarBackIcon,
-          color: appbarIcon,
-          onPressed: () => Navigator.of(context).pop(),
-          ),
-      ),
+      appBar: const GeneralAppBar(),
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -42,19 +35,17 @@ class _PeoplePage extends State<PeoplePage> {
       bottomNavigationBar: bottomNavigationBar,
     );
   }
-
 }
 
 List<People> dataSourceP() {
-    List<People> temp = [];
+  List<People> temp = [];
 
-    for (int i = 0; i < 6; i++) {
-      var peopleName = Strings.PEOPLE_NAMES[i];
-      var peopleDetail = Strings.PEOPLE_DETAILS[i];
-      var peopleImage = 'people_' '${i + 1}.jpeg';
-      People addPeople = People(peopleName, peopleDetail, peopleImage);
-      temp.add(addPeople);
-    }
-    return temp;
+  for (int i = 0; i < 6; i++) {
+    var peopleName = Strings.PEOPLE_NAMES[i];
+    var peopleDetail = Strings.PEOPLE_DETAILS[i];
+    var peopleImage = 'people_' '${i + 1}.jpeg';
+    People addPeople = People(peopleName, peopleDetail, peopleImage);
+    temp.add(addPeople);
+  }
+  return temp;
 }
-
